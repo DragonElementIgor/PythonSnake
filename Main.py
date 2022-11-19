@@ -16,6 +16,7 @@ pygame.display.set_icon(pygame.image.load('snake.png'))
 startLenSnack = 3
 global body
 body = []
+fps = 10
 
 pygame.display.set_caption("Snake Game")
 body = pygameInit(snakesize, startLenSnack)
@@ -60,5 +61,5 @@ while object["InGame"]:
     object = collision(body, wight, height, object, fakestart)
     paint(screen,  green,  body,  snakesize, red, object, textcolor)
     pygame.display.update()
-    clock.tick(2.5)
+    clock.tick(fps)
     fakestart = False
